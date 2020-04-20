@@ -1,5 +1,5 @@
 {
-  "name": "json-comparator",
+  "name": "json-comp-advanced",
   "version": "1.0.0",
   "license": "MIT",
   "description": "A cli tool to compare two json files",
@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "bin": {
-    "json-differ": "./main.js"
+    "json-comp-advanced": "./main.js"
   },
   "author": "Syed Jafar Naqvi",
   "devDependencies": {
