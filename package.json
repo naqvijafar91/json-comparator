@@ -1,6 +1,6 @@
 {
   "name": "json-comp-advanced",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "A cli tool to compare two json files",
   "main": "comparator.js",
