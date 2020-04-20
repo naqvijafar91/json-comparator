@@ -16,7 +16,9 @@ if (!args.first && !args.second) {
 path_1 = args.first;
 path_2 = args.second;
 diffNumToIgnore = args.ignorediff;
-
+if(!diffNumToIgnore) {
+    diffNumToIgnore = 0;
+}
 console.log(
   `Finding diff for files at path: ${path_1} and ${path_2} and ignore numerical difference of ${diffNumToIgnore}`
 );
