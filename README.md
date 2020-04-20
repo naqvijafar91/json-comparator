@@ -5,7 +5,6 @@
 
 ```
 npm install json-comp-advanced -g
-
 ```
 
 # Usage
