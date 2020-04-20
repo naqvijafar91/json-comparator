@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 let fs = require("fs");
 let Comparator = require("./comparator");
 let LineNumberFetcher =  require('./linenumberfetcher');
