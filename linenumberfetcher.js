@@ -1,11 +1,17 @@
-let lineNumber = require('line-number');
+let lineNumber = require("line-number");
+let fs = require("fs");
+const lineReader = require("line-reader");
 
-function fetch(textToSearch) {
-    var re = "/"+textToSearch+"[^,]+/g";
-    // /^123456$/
-    console.log(lineNumber(rawFile, re));
-}
+function LineNumberFetcher() {}
+LineNumberFetcher.prototype.printReport = function (textToSearch, path) {
+  let lineNumber = 0;
+  lineReader.eachLine(path, { encoding: "utf8" }, function (line) {
+    lineNumber++;
+    if (line.includes(textToSearch)) {
+      console.log(`Found difference at Line: ${lineNumber} : ${line}`);
+      return false; // stop reading
+    }
+  });
+};
 
-module.exports = {
-    fetch : fetch
-}
+module.exports = LineNumberFetcher;

@@ -1,7 +1,8 @@
 // Assume that the structure is same along with the order
 
-function Comparator(path_1) {
+function Comparator(path_1, lineNumberFetcher) {
   this.path_1 = path_1;
+  this.lineNumberFetcher = lineNumberFetcher;
 }
 
 Comparator.prototype.compare=function(obj1, obj2) {
@@ -35,6 +36,9 @@ Comparator.prototype.compare=function(obj1, obj2) {
 Comparator.prototype.matchUtilWrapper = function (val1,val2) {
   if (!this.matchUtil(val1, val2)) {
     // Print Line Number as well
+    if(this.lineNumberFetcher) {
+      this.lineNumberFetcher.printReport(val1,this.path_1);
+    }
     return false;
   } else {
     return true;
