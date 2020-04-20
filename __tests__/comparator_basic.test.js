@@ -20,7 +20,7 @@ describe("Comparator", () => {
     let obj2 = {
       b: 2
     };
-    let comparator = new Comparator();
+    let comparator = new Comparator(null,null,1);
     expect(comparator.compare(obj1, obj2)).toEqual(true);
   });
   it("should compare nested object", () => {

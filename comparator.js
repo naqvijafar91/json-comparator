@@ -1,8 +1,9 @@
 // Assume that the structure is same along with the order
 
-function Comparator(path_1, lineNumberFetcher) {
+function Comparator(path_1, lineNumberFetcher,numberToIgnore=0) {
   this.path_1 = path_1;
   this.lineNumberFetcher = lineNumberFetcher;
+  this.numberToIgnore = numberToIgnore;
 }
 
 Comparator.prototype.compare=function(obj1, obj2) {
@@ -54,7 +55,7 @@ Comparator.prototype.matchUtil = function (val1, val2) {
         if(diff<0){
           diff=-1*diff;
         }
-        if(diff>1) {
+        if(diff>this.numberToIgnore) {
           return false;
         } else {
           return true;
