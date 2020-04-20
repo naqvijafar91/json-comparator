@@ -1,7 +1,8 @@
 {
   "name": "json-comparator",
   "version": "1.0.0",
-  "description": "",
+  "license": "MIT",
+  "description": "A cli tool to compare two json files",
   "main": "comparator.js",
   "scripts": {
     "start": "node main.js",
@@ -10,8 +11,7 @@
   "bin": {
     "json-comparator": "./main.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Syed Jafar Naqvi",
   "devDependencies": {
     "jest": "^25.3.0"
   },
@@ -21,5 +21,11 @@
   "dependencies": {
     "line-number": "^0.1.0",
     "line-reader": "^0.4.0"
-  }
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "json",
+    "comparator",
+    "json file comparator"
+  ]
 }
