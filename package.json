@@ -1,0 +1,21 @@
+{
+  "name": "json-comparator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "comparator.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.3.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "line-number": "^0.1.0"
+  }
+}
