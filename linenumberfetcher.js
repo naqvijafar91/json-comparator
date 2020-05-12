@@ -4,6 +4,7 @@ const lineReader = require("line-reader");
 
 function LineNumberFetcher() {}
 LineNumberFetcher.prototype.printReport = function (textToSearch, path) {
+  console.log(`Printing Report........ with text to search ${textToSearch} at path ${path}`);
   let lineNumber = 0;
   lineReader.eachLine(path, { encoding: "utf8" }, function (line) {
     lineNumber++;

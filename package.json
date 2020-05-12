@@ -5,7 +5,7 @@
   "description": "A cli tool to compare two json files",
   "main": "comparator.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node main.js --first=./sample/batch_old.json --second=./sample/batch_new.json",
     "test": "jest"
   },
   "bin": {

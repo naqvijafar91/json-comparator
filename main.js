@@ -8,13 +8,16 @@ let path_2 = "./sample/ct_new.json";
 let diffNumToIgnore = 0;
 
 const args = require("yargs").argv;
-
-if (!args.first && !args.second) {
+if (!args.first && !args.second && args.first!="debug") {
   console.log("No files specified");
   return;
 }
-path_1 = args.first;
-path_2 = args.second;
+if(args.first!="debug") {
+
+  path_1 = args.first;
+  path_2 = args.second;
+}
+
 diffNumToIgnore = args.ignorediff;
 if(!diffNumToIgnore) {
     diffNumToIgnore = 0;
