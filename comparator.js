@@ -19,12 +19,17 @@ Comparator.prototype.compareInternal = function (obj1, obj2) {
   if (this.isJsonObject(obj1)) {
     let part1 = Object.entries(obj1);
     let part2 = Object.entries(obj2);
-    if (part1.length != part2.length) {
-      return false;
-    }
     for (let i = 0; i < part1.length; i++) {
       let keyVal1 = part1[i];
       let keyVal2 = part2[i];
+      if(!keyVal2) {
+        // This means that the key keyVal1 is not present in second file, so we return false and print the report
+        // accordingly
+        if(this.lineNumberFetcher && this.isNotArrayOrObject(keyVal1[0])) {
+          this.reportPrintFunc= this.generateReportFunc(keyVal1[0]);
+        }
+        return false;
+      }
       // Order is same
       let val1 = keyVal1[1];
       let val2 = keyVal2[1];
